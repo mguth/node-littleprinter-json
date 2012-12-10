@@ -15,8 +15,9 @@
         "url": "http://github.com/roylines/node-littleprinter-example.git"
     },
     "dependencies": {
-        "ejs": "0.8.2",
+        "hamljs": "0.6.1",
         "express": "3.0.0rc3",
+        "consolidate": "x.x.x",
         "littleprinter": "x.x.x"
     },
      "engines": {
