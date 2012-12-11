@@ -1,15 +1,13 @@
 var express = require('express'),
-    haml = require('hamljs'),
-    cons   = require('consolidate'),
+    jade = require('jade'),
     handler = require('./handler.js'),
     littleprinter = require('littleprinter');
 
 var app = express();
 var port = process.env.PORT || 5000;
 
-// Make HAML.js work (with the help of consolidate)
-app.engine('haml', cons.haml);
-app.set('view engine', 'haml');
+// Use Jade as templating language
+app.set('view engine', 'jade');
 
 littleprinter.setup(app, handler);
 
