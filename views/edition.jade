@@ -9,8 +9,12 @@ block content
 
   h1 Dish of the week
 
-  each post, i in posts
-    figure
-      img.dither(src=post.media.images[0].scaled500.url)
-      figcaption= post.media.images[0].scaled500.caption
+  figure
+    img.dither(src=posts[0].media.images[0].scaled500.url)
+    figcaption= posts[0].media.images[0].scaled500.caption
+
+  //- each post, i in posts
+  //-   figure
+  //-     img.dither(src=post.media.images[0].scaled500.url)
+  //-     figcaption= post.media.images[0].scaled500.caption
 
