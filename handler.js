@@ -2,9 +2,9 @@ var handler = { };
 
 // change this meta for your publication
 handler.meta = {
-  "owner_email":"you@youremail.com",
+  "owner_email":"moritz.guth@gmail.com",
   "publication_api_version":"1.0",
-  "name": "Example Node.js Server",
+  "name": "What I ate",
   "description": "Example publication for Little Printer",
   "delivered_on":"every day",
   "external_configuration": false,
@@ -16,6 +16,6 @@ handler.meta = {
 handler.edition = undefined;
 
 //use default sample handler
-handler.sample = undefined; 
+handler.sample = undefined;
 
 module.exports = handler;
