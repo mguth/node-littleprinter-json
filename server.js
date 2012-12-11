@@ -8,6 +8,7 @@ var app = express();
 var port = process.env.PORT || 5000;
 
 
+
 // Content server details
 var contentSourceOptions = {
   host: 'posterous.com',
@@ -41,6 +42,7 @@ req.on('close', function() {
 req.end();
 
 
+
 // Use Jade as templating language
 app.set('view engine', 'jade');
 
@@ -58,13 +60,6 @@ app.use(beforeRender);
 app.get('/', function(req,res){
     res.render('index', {layout: false});
 });
-
-
-// Push acquired JSON content to edition template
-// app.get('/edition', function(req,res){
-//   res.render('edition', {pageData: jsonContent});
-// });
-
 
 littleprinter.setup(app, handler);
 
