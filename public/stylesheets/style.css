@@ -1,0 +1,31 @@
+body {
+  width: 384px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px
+  }
+
+.main {
+  overflow: hidden;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #000;
+}
+
+.main > figure > img {
+  max-width: 100%
+}
+
+.main > figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.main > figure > figcaption{
+  font-family:'Signika', sans-serif;
+  font-weight: bold
+}
+
+h1 {
+  font-family:'Signika', sans-serif;
+  }
