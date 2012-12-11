@@ -55,9 +55,9 @@ app.get('/', function(req,res){
 
 
 // Push acquired JSON content to edition template
-app.get('/edition', function(req,res){
-  res.render('edition', {pageData: jsonContent});
-});
+// app.get('/edition', function(req,res){
+//   res.render('edition', {pageData: jsonContent});
+// });
 
 
 
