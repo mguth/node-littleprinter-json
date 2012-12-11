@@ -29,7 +29,7 @@ var req = http.request(contentSourceOptions, function(res) {
   console.log('Remote server response: ' + res.statusCode);
   res.setEncoding('utf8');
   res.on('data', function (chunk) {
-    jsonContent = jsonContent + chunk;
+    jsonContent += chunk;
   });
 });
 
