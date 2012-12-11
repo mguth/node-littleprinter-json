@@ -7,13 +7,6 @@ var express = require('express'),
 var app = express();
 var port = process.env.PORT || 5000;
 
-// Use Jade as templating language
-app.set('view engine', 'jade');
-
-// Use path prefix to declare static files
-app.use('/static', express.static(__dirname + '/public'));
-
-
 
 // Content server details
 var contentSourceOptions = {
@@ -48,6 +41,19 @@ req.on('close', function() {
 req.end();
 
 
+// Use Jade as templating language
+app.set('view engine', 'jade');
+
+// Use path prefix to declare static files
+app.use('/static', express.static(__dirname + '/public'));
+
+// Push acquired JSON content to templates before rendering
+var beforeRender = function(req, res, next) {
+  res.locals.jsonData = jsonContent;
+  return next();
+};
+app.use(beforeRender);
+
 // Provide proper index page
 app.get('/', function(req,res){
     res.render('index', {layout: false});
@@ -58,7 +64,6 @@ app.get('/', function(req,res){
 // app.get('/edition', function(req,res){
 //   res.render('edition', {pageData: jsonContent});
 // });
-
 
 
 littleprinter.setup(app, handler);

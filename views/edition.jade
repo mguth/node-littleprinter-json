@@ -4,14 +4,14 @@ block header
   title Custom title
 
 block content
-  //- var posts = pageData
+  - var posts = locals.jsonData
   //- - console.log('JSON items: ' + posts.length)
 
   h1 Dish of the week
 
-  //- figure
-  //-   img.dither(src=posts[0].media.images[0].scaled500.url)
-  //-   figcaption= posts[0].media.images[0].scaled500.caption
+  figure
+    img.dither(src=posts[0].media.images[0].scaled500.url)
+    figcaption= posts[0].media.images[0].scaled500.caption
 
   //- each post, i in posts
   //-   figure
