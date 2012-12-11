@@ -11,6 +11,6 @@ block content
 
   each post, i in posts
     figure
-      img(src=post.media.images[0].scaled500.url)
+      img.dither(src=post.media.images[0].scaled500.url)
       figcaption= post.media.images[0].scaled500.caption
 
