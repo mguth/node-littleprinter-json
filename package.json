@@ -1,10 +1,10 @@
 {
-    "name": "littleprinterexample",
-    "description": "Example little printer server using littleprinter",
+    "name": "littleprinterjson",
+    "description": "Simple JSON-based publication for little printer, using the littleprinter node module",
     "version": "0.0.1",
     "licenses": [{
         "type": "MIT",
-        "url": "https://github.com/roylines/node-littleprinter-example/raw/master/LICENSE"
+        "url": "https://github.com/mguth/node-littleprinter-json/raw/master/LICENSE"
     }],
     "author": {
         "name": "Moritz Guth",
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/roylines/node-littleprinter-example.git"
+        "url": "http://github.com/mguth/node-littleprinter-json.git"
     },
     "dependencies": {
         "express": "3.0.0rc3",
